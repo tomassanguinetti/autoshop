@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --tq-ink: #121417;
+    --tq-graphite: #191C21;
+    --tq-graphite-2: #21252C;
+    --tq-graphite-3: #2A2F37;
+    --tq-line-dark: #31363F;
+    --tq-steel: #8C96A4;
+    --tq-steel-2: #B9C1CC;
+    --tq-paper: #EEF1F5;
+    --tq-paper-2: #E2E7EE;
+    --tq-line: #D3DAE3;
+    --tq-white: #FFFFFF;
+    --tq-body: #4B535F;
+    --tq-heading: #16191D;
+    --tq-orange: #FF6A1A;
+    --tq-orange-600: #EA5A0B;
+    --tq-orange-700: #C94A05;
+    --tq-orange-soft: #FFE7D6;
+    --tq-green: #2FBF71;
+    --tq-radius: 4px;
+    --tq-radius-lg: 6px;
+    --tq-display: "Saira Condensed", "Arial Narrow", sans-serif;
+    --tq-body-font: "Barlow", system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--tq-body-font);
+    color: var(--tq-body);
+    background-color: var(--tq-white);
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--tq-display);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Hazard diagonal stripes */
+.tq-hazard {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--tq-orange) 0,
+    var(--tq-orange) 14px,
+    var(--tq-ink) 14px,
+    var(--tq-ink) 28px
+  );
+}
+
+.tq-hazard-thin {
+  height: 6px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--tq-orange) 0,
+    var(--tq-orange) 12px,
+    #1b1d21 12px,
+    #1b1d21 24px
+  );
+}
+
+/* Carbon weave texture */
+.tq-carbon {
+  background-color: var(--tq-ink);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.018) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.018) 50%,
+    rgba(255, 255, 255, 0.018) 75%,
+    transparent 75%
+  );
+  background-size: 8px 8px;
+}
+
+/* Coupon punch-out circles */
+.tq-coupon {
+  position: relative;
+  border: 2px dashed var(--tq-orange);
+  border-radius: var(--tq-radius-lg);
+  overflow: hidden;
+}
+
+.tq-coupon::before,
+.tq-coupon::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--tq-ink);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tq-coupon::before {
+  left: -12px;
+}
+
+.tq-coupon::after {
+  right: -12px;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ApexAuto - Car Shop Client Website Studio",
+  "description": "Production-ready auto repair and mechanic website template with interactive repair quote calculator, appointment booking, client white-labeling, and file migration tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
